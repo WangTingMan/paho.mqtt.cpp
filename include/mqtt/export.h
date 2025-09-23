@@ -25,6 +25,10 @@
 #ifndef __mqtt_export_h
 #define __mqtt_export_h
 
+#ifndef PAHO_MQTTPP_EXPORTS
+#define PAHO_MQTTPP_IMPORTS
+#endif
+
 #if defined(_WIN32) && defined(_MSC_VER)
     #if defined(PAHO_MQTTPP_EXPORTS)
         #define PAHO_MQTTPP_EXPORT __declspec(dllexport)
