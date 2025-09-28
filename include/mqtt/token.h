@@ -40,6 +40,8 @@
 #include "mqtt/string_collection.h"
 #include "mqtt/types.h"
 
+#include "mqtt/export.h"
+
 namespace mqtt {
 
 class iasync_client;
@@ -50,7 +52,7 @@ class iasync_client;
  * Provides a mechanism for tracking the completion of an asynchronous
  * action.
  */
-class token
+class PAHO_MQTTPP_EXPORT token
 {
 public:
     /** Smart/shared pointer to an object of this class */

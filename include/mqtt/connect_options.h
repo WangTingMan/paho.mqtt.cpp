@@ -38,6 +38,8 @@
 #include "mqtt/types.h"
 #include "mqtt/will_options.h"
 
+#include "mqtt/export.h"
+
 namespace mqtt {
 
 /////////////////////////////////////////////////////////////////////////////
@@ -46,7 +48,7 @@ namespace mqtt {
  * Holds the set of options that control how the client connects to a
  * server.
  */
-class connect_options
+class PAHO_MQTTPP_EXPORT connect_options
 {
     /** The default C struct for non-WebSocket connections */
     static constexpr MQTTAsync_connectOptions DFLT_C_STRUCT

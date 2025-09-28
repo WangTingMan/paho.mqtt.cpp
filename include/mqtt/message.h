@@ -33,6 +33,8 @@
 #include "mqtt/platform.h"
 #include "mqtt/properties.h"
 
+#include "mqtt/export.h"
+
 namespace mqtt {
 
 /////////////////////////////////////////////////////////////////////////////
@@ -53,7 +55,7 @@ namespace mqtt {
  * It is safe to pass these buffer references across threads since all
  * references promise not to update the contents of the buffer.
  */
-class message
+class PAHO_MQTTPP_EXPORT message
 {
 public:
     /** The default QoS for a message */
@@ -65,9 +67,9 @@ private:
     /** Initializer for the C struct (from the C library) */
     static constexpr MQTTAsync_message DFLT_C_STRUCT MQTTAsync_message_initializer;
     /** A const string to use for references */
-    PAHO_MQTTPP_EXPORT static const string EMPTY_STR;
+    /*PAHO_MQTTPP_EXPORT*/ static const string EMPTY_STR;
     /** A const binary to use for references */
-    PAHO_MQTTPP_EXPORT static const binary EMPTY_BIN;
+    /*PAHO_MQTTPP_EXPORT*/ static const binary EMPTY_BIN;
 
     /** The underlying C message struct */
     MQTTAsync_message msg_{DFLT_C_STRUCT};

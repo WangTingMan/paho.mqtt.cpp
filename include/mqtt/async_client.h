@@ -57,6 +57,8 @@
 #include "mqtt/token.h"
 #include "mqtt/types.h"
 
+#include "mqtt/export.h"
+
 namespace mqtt {
 
 // OBSOLETE: The legacy constants that lacked the "PAHO_MQTTPP_" prefix
@@ -133,7 +135,7 @@ const string COPYRIGHT("Copyright (c) 2013-2025 Frank Pagliughi");
  *     mqtt::async_client cli(createOpts);
  * @endcode
  */
-class async_client : public virtual iasync_client
+class PAHO_MQTTPP_EXPORT async_client : public virtual iasync_client
 {
 public:
     /** Smart/shared pointer for an object of this class */
